@@ -1,3 +1,6 @@
+# Using the combination. Firstly check the max number of 2 which the stair can handle. Then using the combation to sum all the possible solutions.
+# Never forget to test the extreme value. Aslo, when using the new function, try to test the special case of it.
+
 class Solution:
     def climbStairs(self, n):
         """
