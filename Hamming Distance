@@ -1,0 +1,28 @@
+class Solution:
+    def hammingDistance(self, x, y):
+        """
+        :type x: int
+        :type y: int
+        :rtype: int
+        """
+        l1=[x1 for x1 in bin(x)]
+        l1.remove(l1[1])
+        
+        l2=[x2 for x2 in bin(y)]
+        l2.remove(l2[1])
+        
+        a2=['0']
+        if len(l1)>len(l2):
+            a1=len(l1)-len(l2)
+            l2=a2*a1+l2
+        elif len(l1)<len(l2):
+            a1=len(l2)-len(l1)
+            l1=a2*a1+l1
+        
+        l3=0
+        a4=len(l1)
+        for x3 in range(0,a4):
+            if l1[x3]!=l2[x3]:
+                l3+=1
+        
+        return l3
