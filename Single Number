@@ -1,0 +1,22 @@
+class Solution:
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        a1=len(nums)
+        nums=sorted(nums)
+        if a1==1:
+            res=nums[0]
+        else:
+            if a1%2==0:
+                res=0
+            else:             
+                b1=range(0,a1-1,2)
+                for x1 in b1:
+                    if nums[x1]!=nums[x1+1]:
+                        res=nums[x1]
+                        break
+                    else:
+                        res=nums[-1]
+        return res
