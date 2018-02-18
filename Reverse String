@@ -1,0 +1,17 @@
+class Solution:
+    def reverseString(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        if len(s)==0:
+            a1=""
+        else:
+            a=s
+            b=[x for x in a]
+            b.reverse()
+            a1=a[-1]
+            b.remove(a1)
+            for x1 in b:
+                a1+=x1
+        return a1
