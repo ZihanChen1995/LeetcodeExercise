@@ -1,0 +1,24 @@
+class Solution:
+    def customSortString(self, S, T):
+        """
+        :type S: str
+        :type T: str
+        :rtype: str
+        """
+        ls=[]
+        lt=[]
+        for x3 in S:
+            ls.append(x3)
+        for x4 in T:
+            lt.append(x4)
+        l5=lt[:]
+        l1=[]
+        for x1 in ls:
+            for x2 in l5:
+                if x2==x1:
+                    l1.append(x2)
+                    lt.remove(x2)
+        lt.sort()
+        res=l1+lt
+        res=''.join(res)
+        return res
